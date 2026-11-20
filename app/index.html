@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA 6 Platinum Tracker</title>
+<meta name="description" content="Offline guide and tracker for all 55 Grand Theft Auto VI PlayStation 5 trophies: official names, descriptions and grades, cited guides, a platinum roadmap, missable flags and a saved checklist.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; 55 trophies &middot; 0 online</p>
+    <h1>Leonida Trophy Guide</h1>
+    <p class="lede">Every trophy with its official name, description and grade, a guide in our own words with its sources, a platinum roadmap, and a checklist that saves in your browser. Works fully offline.</p>
+    <div class="progress-wrap" aria-label="Overall progress">
+      <div class="progress-bar"><span id="progressFill"></span></div>
+      <p class="progress-text"><strong id="progressCount">0 of 55 earned</strong> &middot; <span id="progressByGrade"></span></p>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Views">
+  <button type="button" data-view="checklist" class="tab active" aria-current="page">Checklist</button>
+  <button type="button" data-view="roadmap" class="tab">Platinum roadmap</button>
+  <button type="button" data-view="missable" class="tab">Missable &amp; warnings</button>
+</nav>
+
+<main>
+  <section id="view-checklist" class="view">
+    <div class="toolbar">
+      <label class="search">Search <input id="searchBox" type="search" placeholder="Trophy, mission or keyword…" autocomplete="off"></label>
+      <div class="filters" role="group" aria-label="Filter by kind">
+        <button type="button" data-kind="all" class="chip active">All 55</button>
+        <button type="button" data-kind="story" class="chip">Story</button>
+        <button type="button" data-kind="missable" class="chip">Missable</button>
+        <button type="button" data-kind="collectibles" class="chip">Collectibles</button>
+        <button type="button" data-kind="activities" class="chip">Activities</button>
+      </div>
+      <label class="grade-filter">Grade
+        <select id="gradeFilter">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="toggle"><input id="hideEarned" type="checkbox"> Hide earned</label>
+      <label class="toggle spoiler-toggle"><input id="spoilerToggle" type="checkbox"> Spoiler-safe: hide story trophies until earned</label>
+    </div>
+
+    <div class="io-row">
+      <button id="exportBtn" type="button" class="btn">Export progress (.json)</button>
+      <label class="btn import-btn">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+      <button id="resetBtn" type="button" class="btn btn-quiet">Reset checklist</button>
+      <span id="ioNote" class="io-note" role="status"></span>
+    </div>
+
+    <p id="missableBanner" class="banner">Only one trophy can be missed: <strong>Positive Mental Attitude</strong> — meditate at the Chapter 1 spot before leaving Chapter 1. See the Missable &amp; warnings tab.</p>
+
+    <ul id="trophyList" class="trophy-list"></ul>
+    <p id="emptyNote" class="empty-note" hidden>No trophies match these filters.</p>
+  </section>
+
+  <section id="view-roadmap" class="view" hidden>
+    <h2>Road to the platinum</h2>
+    <p class="roadmap-meta"><span id="roadmapMeta"></span></p>
+    <ol id="roadmapStages" class="roadmap"></ol>
+    <h3>Ground rules</h3>
+    <ul id="roadmapNotes" class="notes"></ul>
+  </section>
+
+  <section id="view-missable" class="view" hidden>
+    <h2>Missable &amp; warnings</h2>
+    <div id="missableList" class="missable-list"></div>
+    <h3>Still unconfirmed — do not chase rumours</h3>
+    <p>Five hidden trophies have no confirmed method in any cited guide. This guide says so honestly rather than inventing one; check the cited guides for updates.</p>
+    <ul id="unconfirmedList" class="unconfirmed"></ul>
+  </section>
+
+  <section id="detail" class="detail" hidden aria-live="polite">
+    <button id="detailClose" type="button" class="btn btn-quiet">Close guide &times;</button>
+    <div id="detailBody"></div>
+  </section>
+
+  <footer>
+    <h2>Sources</h2>
+    <p>Official trophy names, descriptions and grades are quoted as PlayStation publishes them (collected by PSNProfiles, TrueAchievements and Exophase). Every guide above is written in our own words; the facts behind each one come from the guides named beside it:</p>
+    <ul>
+      <li><strong>PowerPyx</strong> — GTA 6 trophy guide &amp; roadmap</li>
+      <li><strong>KeenGamer</strong> — GTA 6 trophy guide, platinum roadmap &amp; all 55 trophies</li>
+      <li><strong>gtaspotter</strong> — full official list, as PlayStation and Xbox show it (PSNProfiles / TrueAchievements)</li>
+      <li><strong>gamemapa</strong> — full list cross-check (GamesRadar+ vs PowerPyx)</li>
+    </ul>
+    <p class="fineprint">An unofficial fan guide. Not affiliated with Rockstar Games or PlayStation. No game artwork or logos are used. All data is stored only in your browser (localStorage); export and import move it as a file you control.</p>
+  </footer>
+</main>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
